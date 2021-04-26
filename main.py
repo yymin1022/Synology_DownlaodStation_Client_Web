@@ -5,7 +5,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/register', methods=['POST'])
+@app.route('/register', methods=['GET', 'POST'])
 def register():
     value = request.form['fileURL']
     return value

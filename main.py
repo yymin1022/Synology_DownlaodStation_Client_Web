@@ -7,7 +7,7 @@ def index():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    value = request.form['fileurl']
+    value = request.form.get('fileurl', False)
     return value
 
 if __name__ == '__main__':
